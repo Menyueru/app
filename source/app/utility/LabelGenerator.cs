@@ -25,7 +25,7 @@ namespace app.utility
       if (index < length)
         return vocabulary[index];
 
-      return create_label(number % length) + create_label(number / length);
+      return create_label((int)System.Math.Ceiling((double)number / (double)length)-1) + create_label((index % length)+1);
     }
 
     IEnumerator IEnumerable.GetEnumerator()
